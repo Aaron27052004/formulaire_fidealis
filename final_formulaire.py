@@ -327,7 +327,7 @@ st.divider()
 address = st.text_input("Adresse complète ", key="form_address")
 
 # 3. Bouton pour synchroniser l'adresse texte -> coords
-if st.button("Vérifier les coordonnées depuis l'adresse ci-dessus ⬆️"):
+if st.button("actualiser la carte ⬆️"):
     if st.session_state.form_address:
         lat, lon = get_coords_from_address_text(st.session_state.form_address, GOOGLE_API_KEY)
         if lat is not None and lon is not None:
